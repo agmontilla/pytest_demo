@@ -10,7 +10,7 @@ def app():
     return app
 
 
-missing_fields_in_payload = [json.dumps({"foo": 1}), json.dumps({"bar": 1})]
+missing_fields_in_payload = (json.dumps({"foo": 1}), json.dumps({"bar": 1}))
 
 
 @pytest.fixture(params=missing_fields_in_payload)
